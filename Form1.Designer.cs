@@ -37,22 +37,30 @@ namespace Original_ParkingLot
             this.rBSiA = new System.Windows.Forms.RadioButton();
             this.rBNoA = new System.Windows.Forms.RadioButton();
             this.gBAfiliado = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.gBV = new System.Windows.Forms.GroupBox();
+            this.rBCMV = new System.Windows.Forms.RadioButton();
+            this.rBPV = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.label5 = new System.Windows.Forms.Label();
+            this.gBGenero = new System.Windows.Forms.GroupBox();
+            this.rBOG = new System.Windows.Forms.RadioButton();
+            this.rBMG = new System.Windows.Forms.RadioButton();
+            this.rBHG = new System.Windows.Forms.RadioButton();
+            this.lblIyD = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lblHI = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.lblHS = new System.Windows.Forms.Label();
+            this.btnAHI = new System.Windows.Forms.Button();
+            this.btnAHS = new System.Windows.Forms.Button();
+            this.rTxBED = new System.Windows.Forms.RichTextBox();
+            this.lblED = new System.Windows.Forms.Label();
             this.gBAfiliado.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gBV.SuspendLayout();
+            this.gBGenero.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblDriver
@@ -133,38 +141,38 @@ namespace Original_ParkingLot
             this.gBAfiliado.TabStop = false;
             this.gBAfiliado.Text = "Afiliado";
             // 
-            // groupBox1
+            // gBV
             // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Location = new System.Drawing.Point(521, 157);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(189, 84);
-            this.groupBox1.TabIndex = 13;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Afiliado";
+            this.gBV.Controls.Add(this.rBCMV);
+            this.gBV.Controls.Add(this.rBPV);
+            this.gBV.Location = new System.Drawing.Point(521, 157);
+            this.gBV.Name = "gBV";
+            this.gBV.Size = new System.Drawing.Size(189, 84);
+            this.gBV.TabIndex = 13;
+            this.gBV.TabStop = false;
+            this.gBV.Text = "Vehículo";
             // 
-            // radioButton1
+            // rBCMV
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(18, 54);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(169, 24);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Camioneta/Microbus";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rBCMV.AutoSize = true;
+            this.rBCMV.Location = new System.Drawing.Point(18, 54);
+            this.rBCMV.Name = "rBCMV";
+            this.rBCMV.Size = new System.Drawing.Size(169, 24);
+            this.rBCMV.TabIndex = 6;
+            this.rBCMV.TabStop = true;
+            this.rBCMV.Text = "Camioneta/Microbus";
+            this.rBCMV.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rBPV
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(18, 26);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(91, 24);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Particular";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rBPV.AutoSize = true;
+            this.rBPV.Location = new System.Drawing.Point(18, 26);
+            this.rBPV.Name = "rBPV";
+            this.rBPV.Size = new System.Drawing.Size(91, 24);
+            this.rBPV.TabIndex = 5;
+            this.rBPV.TabStop = true;
+            this.rBPV.Text = "Particular";
+            this.rBPV.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -209,70 +217,146 @@ namespace Original_ParkingLot
             this.label4.Text = "Vehículo";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // groupBox2
+            // gBGenero
             // 
-            this.groupBox2.Controls.Add(this.radioButton5);
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Controls.Add(this.radioButton4);
-            this.groupBox2.Location = new System.Drawing.Point(188, 147);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(132, 110);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Afiliado";
+            this.gBGenero.Controls.Add(this.rBOG);
+            this.gBGenero.Controls.Add(this.rBMG);
+            this.gBGenero.Controls.Add(this.rBHG);
+            this.gBGenero.Location = new System.Drawing.Point(188, 147);
+            this.gBGenero.Name = "gBGenero";
+            this.gBGenero.Size = new System.Drawing.Size(132, 110);
+            this.gBGenero.TabIndex = 8;
+            this.gBGenero.TabStop = false;
+            this.gBGenero.Text = "Género";
             // 
-            // radioButton3
+            // rBOG
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(18, 54);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(68, 24);
-            this.radioButton3.TabIndex = 6;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Mujer";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rBOG.AutoSize = true;
+            this.rBOG.Location = new System.Drawing.Point(18, 80);
+            this.rBOG.Name = "rBOG";
+            this.rBOG.Size = new System.Drawing.Size(60, 24);
+            this.rBOG.TabIndex = 7;
+            this.rBOG.TabStop = true;
+            this.rBOG.Text = "Otro";
+            this.rBOG.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rBMG
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(18, 26);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(85, 24);
-            this.radioButton4.TabIndex = 5;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Hombre";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.rBMG.AutoSize = true;
+            this.rBMG.Location = new System.Drawing.Point(18, 54);
+            this.rBMG.Name = "rBMG";
+            this.rBMG.Size = new System.Drawing.Size(68, 24);
+            this.rBMG.TabIndex = 6;
+            this.rBMG.TabStop = true;
+            this.rBMG.Text = "Mujer";
+            this.rBMG.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // rBHG
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(18, 80);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(60, 24);
-            this.radioButton5.TabIndex = 7;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Otro";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rBHG.AutoSize = true;
+            this.rBHG.Location = new System.Drawing.Point(18, 26);
+            this.rBHG.Name = "rBHG";
+            this.rBHG.Size = new System.Drawing.Size(85, 24);
+            this.rBHG.TabIndex = 5;
+            this.rBHG.TabStop = true;
+            this.rBHG.Text = "Hombre";
+            this.rBHG.UseVisualStyleBackColor = true;
+            this.rBHG.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
-            // label5
+            // lblIyD
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(105, 284);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(169, 20);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Ingreso y disponibilidad";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.lblIyD.AutoSize = true;
+            this.lblIyD.Location = new System.Drawing.Point(105, 284);
+            this.lblIyD.Name = "lblIyD";
+            this.lblIyD.Size = new System.Drawing.Size(169, 20);
+            this.lblIyD.TabIndex = 14;
+            this.lblIyD.Text = "Ingreso y disponibilidad";
+            this.lblIyD.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(105, 338);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(189, 27);
+            this.textBox3.TabIndex = 16;
+            // 
+            // lblHI
+            // 
+            this.lblHI.AutoSize = true;
+            this.lblHI.Location = new System.Drawing.Point(105, 315);
+            this.lblHI.Name = "lblHI";
+            this.lblHI.Size = new System.Drawing.Size(98, 20);
+            this.lblHI.TabIndex = 15;
+            this.lblHI.Text = "Hora ingreso:";
+            this.lblHI.Click += new System.EventHandler(this.label5_Click_1);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(105, 398);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(189, 27);
+            this.textBox4.TabIndex = 18;
+            // 
+            // lblHS
+            // 
+            this.lblHS.AutoSize = true;
+            this.lblHS.Location = new System.Drawing.Point(105, 375);
+            this.lblHS.Name = "lblHS";
+            this.lblHS.Size = new System.Drawing.Size(88, 20);
+            this.lblHS.TabIndex = 17;
+            this.lblHS.Text = "Hora salida:";
+            // 
+            // btnAHI
+            // 
+            this.btnAHI.Location = new System.Drawing.Point(324, 338);
+            this.btnAHI.Name = "btnAHI";
+            this.btnAHI.Size = new System.Drawing.Size(94, 29);
+            this.btnAHI.TabIndex = 19;
+            this.btnAHI.Text = "Aceptar";
+            this.btnAHI.UseVisualStyleBackColor = true;
+            // 
+            // btnAHS
+            // 
+            this.btnAHS.Location = new System.Drawing.Point(324, 396);
+            this.btnAHS.Name = "btnAHS";
+            this.btnAHS.Size = new System.Drawing.Size(94, 29);
+            this.btnAHS.TabIndex = 20;
+            this.btnAHS.Text = "Aceptar";
+            this.btnAHS.UseVisualStyleBackColor = true;
+            // 
+            // rTxBED
+            // 
+            this.rTxBED.Location = new System.Drawing.Point(521, 327);
+            this.rTxBED.Name = "rTxBED";
+            this.rTxBED.Size = new System.Drawing.Size(222, 98);
+            this.rTxBED.TabIndex = 21;
+            this.rTxBED.Text = "";
+            // 
+            // lblED
+            // 
+            this.lblED.AutoSize = true;
+            this.lblED.Location = new System.Drawing.Point(521, 284);
+            this.lblED.Name = "lblED";
+            this.lblED.Size = new System.Drawing.Size(134, 20);
+            this.lblED.TabIndex = 22;
+            this.lblED.Text = "Espacio disponible";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.lblED);
+            this.Controls.Add(this.rTxBED);
+            this.Controls.Add(this.btnAHS);
+            this.Controls.Add(this.btnAHI);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.lblHS);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.lblHI);
+            this.Controls.Add(this.lblIyD);
+            this.Controls.Add(this.gBGenero);
+            this.Controls.Add(this.gBV);
             this.Controls.Add(this.gBAfiliado);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
@@ -288,10 +372,10 @@ namespace Original_ParkingLot
             this.Text = "ParkingLot";
             this.gBAfiliado.ResumeLayout(false);
             this.gBAfiliado.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gBV.ResumeLayout(false);
+            this.gBV.PerformLayout();
+            this.gBGenero.ResumeLayout(false);
+            this.gBGenero.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,19 +391,27 @@ namespace Original_ParkingLot
         private System.Windows.Forms.RadioButton rBSiA;
         private System.Windows.Forms.RadioButton rBNoA;
         private System.Windows.Forms.GroupBox gBAfiliado;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.GroupBox gBV;
+        private System.Windows.Forms.RadioButton rBCMV;
+        private System.Windows.Forms.RadioButton rBPV;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox gBGenero;
+        private System.Windows.Forms.RadioButton rBMG;
+        private System.Windows.Forms.RadioButton rBHG;
+        private System.Windows.Forms.RadioButton rBOG;
+        private System.Windows.Forms.Label lblIyD;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label lblHI;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label lblHS;
+        private System.Windows.Forms.Button btnAHI;
+        private System.Windows.Forms.Button btnAHS;
+        private System.Windows.Forms.RichTextBox rTxBED;
+        private System.Windows.Forms.Label lblED;
     }
 }
 

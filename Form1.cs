@@ -68,12 +68,21 @@ namespace Original_ParkingLot
                 Conductor.Sexo = "Femenino";
             if (rBOG.Checked == true)
                 Conductor.Sexo = "Otro";
+            if (rBSiA.Checked == true)
+                Conductor.Afiliado = "Es afiliado";
+            if (rBNoA.Checked == true)
+                Conductor.Afiliado = "No es afiliado";
 
             //vehiculo
 
             Vehiculo.Marca = tbMarca.Text;
             Vehiculo.Placa = tbPM.Text;
             Vehiculo.HoraEn = (int)Convert.ToDouble(tbHI);
+
+            if (rBPV.Checked == true)
+                Vehiculo.Tipo = "El vehículo es particular";
+            if (rBCMV.Checked == true)
+                Vehiculo.Tipo = "El vehículo es Camioneta/MicroBus";
         } 
     }
 }

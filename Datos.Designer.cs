@@ -29,30 +29,31 @@ namespace Original_ParkingLot
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.rTBguardar = new System.Windows.Forms.RichTextBox();
+            this.rTBguardar2 = new System.Windows.Forms.RichTextBox();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnGuarda = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // rTBguardar
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 12);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(380, 383);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.rTBguardar.Location = new System.Drawing.Point(12, 12);
+            this.rTBguardar.Name = "rTBguardar";
+            this.rTBguardar.Size = new System.Drawing.Size(380, 383);
+            this.rTBguardar.TabIndex = 0;
+            this.rTBguardar.Text = "";
             // 
-            // richTextBox2
+            // rTBguardar2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(398, 12);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(390, 383);
-            this.richTextBox2.TabIndex = 1;
-            this.richTextBox2.Text = "";
+            this.rTBguardar2.Location = new System.Drawing.Point(398, 12);
+            this.rTBguardar2.Name = "rTBguardar2";
+            this.rTBguardar2.Size = new System.Drawing.Size(390, 383);
+            this.rTBguardar2.TabIndex = 1;
+            this.rTBguardar2.Text = "";
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(346, 409);
+            this.btnCerrar.Location = new System.Drawing.Point(551, 409);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(94, 29);
             this.btnCerrar.TabIndex = 2;
@@ -60,14 +61,25 @@ namespace Original_ParkingLot
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // btnGuarda
+            // 
+            this.btnGuarda.Location = new System.Drawing.Point(156, 409);
+            this.btnGuarda.Name = "btnGuarda";
+            this.btnGuarda.Size = new System.Drawing.Size(94, 29);
+            this.btnGuarda.TabIndex = 3;
+            this.btnGuarda.Text = "Guardar";
+            this.btnGuarda.UseVisualStyleBackColor = true;
+            this.btnGuarda.Click += new System.EventHandler(this.btnGuarda_Click);
+            // 
             // Datos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnGuarda);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.rTBguardar2);
+            this.Controls.Add(this.rTBguardar);
             this.Name = "Datos";
             this.Text = "Datos";
             this.ResumeLayout(false);
@@ -76,8 +88,9 @@ namespace Original_ParkingLot
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox rTBguardar;
+        private System.Windows.Forms.RichTextBox rTBguardar2;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnGuarda;
     }
 }

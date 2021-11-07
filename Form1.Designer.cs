@@ -40,9 +40,9 @@ namespace Original_ParkingLot
             this.gBV = new System.Windows.Forms.GroupBox();
             this.rBCMV = new System.Windows.Forms.RadioButton();
             this.rBPV = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbMarca = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbPM = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.gBGenero = new System.Windows.Forms.GroupBox();
@@ -50,9 +50,9 @@ namespace Original_ParkingLot
             this.rBMG = new System.Windows.Forms.RadioButton();
             this.rBHG = new System.Windows.Forms.RadioButton();
             this.lblIyD = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbHI = new System.Windows.Forms.TextBox();
             this.lblHI = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbHS = new System.Windows.Forms.TextBox();
             this.lblHS = new System.Windows.Forms.Label();
             this.btnAHI = new System.Windows.Forms.Button();
             this.btnSA = new System.Windows.Forms.Button();
@@ -175,12 +175,12 @@ namespace Original_ParkingLot
             this.rBPV.Text = "Particular";
             this.rBPV.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tbMarca
             // 
-            this.textBox1.Location = new System.Drawing.Point(340, 114);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 27);
-            this.textBox1.TabIndex = 12;
+            this.tbMarca.Location = new System.Drawing.Point(340, 114);
+            this.tbMarca.Name = "tbMarca";
+            this.tbMarca.Size = new System.Drawing.Size(189, 27);
+            this.tbMarca.TabIndex = 12;
             // 
             // label2
             // 
@@ -191,12 +191,12 @@ namespace Original_ParkingLot
             this.label2.TabIndex = 11;
             this.label2.Text = "Marca:";
             // 
-            // textBox2
+            // tbPM
             // 
-            this.textBox2.Location = new System.Drawing.Point(340, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 27);
-            this.textBox2.TabIndex = 10;
+            this.tbPM.Location = new System.Drawing.Point(340, 61);
+            this.tbPM.Name = "tbPM";
+            this.tbPM.Size = new System.Drawing.Size(189, 27);
+            this.tbPM.TabIndex = 10;
             // 
             // label3
             // 
@@ -274,12 +274,12 @@ namespace Original_ParkingLot
             this.lblIyD.Text = "Ingreso y disponibilidad";
             this.lblIyD.Click += new System.EventHandler(this.label5_Click);
             // 
-            // textBox3
+            // tbHI
             // 
-            this.textBox3.Location = new System.Drawing.Point(572, 52);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(189, 27);
-            this.textBox3.TabIndex = 16;
+            this.tbHI.Location = new System.Drawing.Point(572, 52);
+            this.tbHI.Name = "tbHI";
+            this.tbHI.Size = new System.Drawing.Size(189, 27);
+            this.tbHI.TabIndex = 16;
             // 
             // lblHI
             // 
@@ -291,12 +291,12 @@ namespace Original_ParkingLot
             this.lblHI.Text = "Hora ingreso:";
             this.lblHI.Click += new System.EventHandler(this.label5_Click_1);
             // 
-            // textBox4
+            // tbHS
             // 
-            this.textBox4.Location = new System.Drawing.Point(572, 112);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(189, 27);
-            this.textBox4.TabIndex = 18;
+            this.tbHS.Location = new System.Drawing.Point(572, 112);
+            this.tbHS.Name = "tbHS";
+            this.tbHS.Size = new System.Drawing.Size(189, 27);
+            this.tbHS.TabIndex = 18;
             // 
             // lblHS
             // 
@@ -362,18 +362,18 @@ namespace Original_ParkingLot
             this.Controls.Add(this.rTxBED);
             this.Controls.Add(this.btnSA);
             this.Controls.Add(this.btnAHI);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbHS);
             this.Controls.Add(this.lblHS);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbHI);
             this.Controls.Add(this.lblHI);
             this.Controls.Add(this.lblIyD);
             this.Controls.Add(this.gBGenero);
             this.Controls.Add(this.gBV);
             this.Controls.Add(this.gBAfiliado);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbMarca);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tBD);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbPM);
             this.Controls.Add(this.lblD);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tBNyA);
@@ -406,9 +406,9 @@ namespace Original_ParkingLot
         private System.Windows.Forms.GroupBox gBV;
         private System.Windows.Forms.RadioButton rBCMV;
         private System.Windows.Forms.RadioButton rBPV;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbMarca;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbPM;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox gBGenero;
@@ -416,9 +416,9 @@ namespace Original_ParkingLot
         private System.Windows.Forms.RadioButton rBHG;
         private System.Windows.Forms.RadioButton rBOG;
         private System.Windows.Forms.Label lblIyD;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbHI;
         private System.Windows.Forms.Label lblHI;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbHS;
         private System.Windows.Forms.Label lblHS;
         private System.Windows.Forms.Button btnAHI;
         private System.Windows.Forms.Button btnSA;

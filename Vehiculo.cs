@@ -11,6 +11,7 @@ namespace Original_ParkingLot
         static public string Marca;
         static public string Color;
         static public string Tipo;
+        static public string Placa;
 
         static public int HoraEn;
         static public int HoraSa;

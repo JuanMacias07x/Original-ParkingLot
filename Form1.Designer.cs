@@ -55,9 +55,10 @@ namespace Original_ParkingLot
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.lblHS = new System.Windows.Forms.Label();
             this.btnAHI = new System.Windows.Forms.Button();
-            this.btnAHS = new System.Windows.Forms.Button();
+            this.btnSA = new System.Windows.Forms.Button();
             this.rTxBED = new System.Windows.Forms.RichTextBox();
             this.lblED = new System.Windows.Forms.Label();
+            this.btnHistorial = new System.Windows.Forms.Button();
             this.gBAfiliado.SuspendLayout();
             this.gBV.SuspendLayout();
             this.gBGenero.SuspendLayout();
@@ -145,7 +146,7 @@ namespace Original_ParkingLot
             // 
             this.gBV.Controls.Add(this.rBCMV);
             this.gBV.Controls.Add(this.rBPV);
-            this.gBV.Location = new System.Drawing.Point(521, 157);
+            this.gBV.Location = new System.Drawing.Point(340, 157);
             this.gBV.Name = "gBV";
             this.gBV.Size = new System.Drawing.Size(189, 84);
             this.gBV.TabIndex = 13;
@@ -176,7 +177,7 @@ namespace Original_ParkingLot
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(521, 114);
+            this.textBox1.Location = new System.Drawing.Point(340, 114);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(189, 27);
             this.textBox1.TabIndex = 12;
@@ -184,7 +185,7 @@ namespace Original_ParkingLot
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(521, 91);
+            this.label2.Location = new System.Drawing.Point(340, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 20);
             this.label2.TabIndex = 11;
@@ -192,7 +193,7 @@ namespace Original_ParkingLot
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(521, 61);
+            this.textBox2.Location = new System.Drawing.Point(340, 61);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(189, 27);
             this.textBox2.TabIndex = 10;
@@ -200,7 +201,7 @@ namespace Original_ParkingLot
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(521, 38);
+            this.label3.Location = new System.Drawing.Point(340, 38);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 20);
             this.label3.TabIndex = 9;
@@ -210,7 +211,7 @@ namespace Original_ParkingLot
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(568, 9);
+            this.label4.Location = new System.Drawing.Point(387, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 20);
             this.label4.TabIndex = 8;
@@ -266,7 +267,7 @@ namespace Original_ParkingLot
             // lblIyD
             // 
             this.lblIyD.AutoSize = true;
-            this.lblIyD.Location = new System.Drawing.Point(105, 284);
+            this.lblIyD.Location = new System.Drawing.Point(572, 9);
             this.lblIyD.Name = "lblIyD";
             this.lblIyD.Size = new System.Drawing.Size(169, 20);
             this.lblIyD.TabIndex = 14;
@@ -275,7 +276,7 @@ namespace Original_ParkingLot
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(105, 338);
+            this.textBox3.Location = new System.Drawing.Point(572, 52);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(189, 27);
             this.textBox3.TabIndex = 16;
@@ -283,7 +284,7 @@ namespace Original_ParkingLot
             // lblHI
             // 
             this.lblHI.AutoSize = true;
-            this.lblHI.Location = new System.Drawing.Point(105, 315);
+            this.lblHI.Location = new System.Drawing.Point(572, 29);
             this.lblHI.Name = "lblHI";
             this.lblHI.Size = new System.Drawing.Size(98, 20);
             this.lblHI.TabIndex = 15;
@@ -292,7 +293,7 @@ namespace Original_ParkingLot
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(105, 398);
+            this.textBox4.Location = new System.Drawing.Point(572, 112);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(189, 27);
             this.textBox4.TabIndex = 18;
@@ -300,7 +301,7 @@ namespace Original_ParkingLot
             // lblHS
             // 
             this.lblHS.AutoSize = true;
-            this.lblHS.Location = new System.Drawing.Point(105, 375);
+            this.lblHS.Location = new System.Drawing.Point(572, 89);
             this.lblHS.Name = "lblHS";
             this.lblHS.Size = new System.Drawing.Size(88, 20);
             this.lblHS.TabIndex = 17;
@@ -308,47 +309,58 @@ namespace Original_ParkingLot
             // 
             // btnAHI
             // 
-            this.btnAHI.Location = new System.Drawing.Point(324, 338);
+            this.btnAHI.Location = new System.Drawing.Point(572, 157);
             this.btnAHI.Name = "btnAHI";
-            this.btnAHI.Size = new System.Drawing.Size(94, 29);
+            this.btnAHI.Size = new System.Drawing.Size(184, 29);
             this.btnAHI.TabIndex = 19;
-            this.btnAHI.Text = "Aceptar";
+            this.btnAHI.Text = "Aceptar ";
             this.btnAHI.UseVisualStyleBackColor = true;
+            this.btnAHI.Click += new System.EventHandler(this.btnAHI_Click);
             // 
-            // btnAHS
+            // btnSA
             // 
-            this.btnAHS.Location = new System.Drawing.Point(324, 396);
-            this.btnAHS.Name = "btnAHS";
-            this.btnAHS.Size = new System.Drawing.Size(94, 29);
-            this.btnAHS.TabIndex = 20;
-            this.btnAHS.Text = "Aceptar";
-            this.btnAHS.UseVisualStyleBackColor = true;
+            this.btnSA.Location = new System.Drawing.Point(572, 222);
+            this.btnSA.Name = "btnSA";
+            this.btnSA.Size = new System.Drawing.Size(184, 29);
+            this.btnSA.TabIndex = 20;
+            this.btnSA.Text = "Salida/saldo";
+            this.btnSA.UseVisualStyleBackColor = true;
             // 
             // rTxBED
             // 
-            this.rTxBED.Location = new System.Drawing.Point(521, 327);
+            this.rTxBED.Location = new System.Drawing.Point(99, 327);
             this.rTxBED.Name = "rTxBED";
-            this.rTxBED.Size = new System.Drawing.Size(222, 98);
+            this.rTxBED.Size = new System.Drawing.Size(428, 111);
             this.rTxBED.TabIndex = 21;
             this.rTxBED.Text = "";
             // 
             // lblED
             // 
             this.lblED.AutoSize = true;
-            this.lblED.Location = new System.Drawing.Point(521, 284);
+            this.lblED.Location = new System.Drawing.Point(245, 294);
             this.lblED.Name = "lblED";
             this.lblED.Size = new System.Drawing.Size(134, 20);
             this.lblED.TabIndex = 22;
             this.lblED.Text = "Espacio disponible";
+            // 
+            // btnHistorial
+            // 
+            this.btnHistorial.Location = new System.Drawing.Point(572, 366);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Size = new System.Drawing.Size(117, 38);
+            this.btnHistorial.TabIndex = 23;
+            this.btnHistorial.Text = "Historial";
+            this.btnHistorial.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnHistorial);
             this.Controls.Add(this.lblED);
             this.Controls.Add(this.rTxBED);
-            this.Controls.Add(this.btnAHS);
+            this.Controls.Add(this.btnSA);
             this.Controls.Add(this.btnAHI);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.lblHS);
@@ -409,9 +421,10 @@ namespace Original_ParkingLot
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label lblHS;
         private System.Windows.Forms.Button btnAHI;
-        private System.Windows.Forms.Button btnAHS;
+        private System.Windows.Forms.Button btnSA;
         private System.Windows.Forms.RichTextBox rTxBED;
         private System.Windows.Forms.Label lblED;
+        private System.Windows.Forms.Button btnHistorial;
     }
 }
 

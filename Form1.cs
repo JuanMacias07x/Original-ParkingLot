@@ -61,5 +61,16 @@ namespace Original_ParkingLot
         {
 
         }
+
+        public void btnAHI_Click(object sender, EventArgs e)
+        {
+            double si = 0.0;
+            string datos = "";
+
+            si = Convert.ToDouble("");
+                {
+                if (rBSiA.Checked == true) ;
+            }
+        } 
     }
 }

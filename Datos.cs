@@ -25,21 +25,36 @@ namespace Original_ParkingLot
 
         private void btnGuarda_Click(object sender, EventArgs e)
         {
-            SaveFileDialog guardar = new SaveFileDialog();
-            guardar.Filter = "Documento de texto|*.txt";
-            guardar.Title = "Guardar RtB";
-            guardar.FileName = "Sin título 1";
-            var resultado = guardar.ShowDialog();
+            SaveFileDialog guardarC = new SaveFileDialog();
+            guardarC.Filter = "Documento de texto|*.txt";
+            guardarC.Title = "Guardar RtB";
+            guardarC.FileName = "Conductor 1";
+            var resultado = guardarC.ShowDialog();
             if (resultado == DialogResult.OK)
             {
-                StreamWriter escribir = new StreamWriter(guardar.FileName);
+                StreamWriter escribir = new StreamWriter(guardarC.FileName);
                 foreach (object line in rTBguardar.Lines) 
                 {
                     escribir.WriteLine(line);
                 }
                 escribir.Close();
             }
+            SaveFileDialog guardarV = new SaveFileDialog();
+            guardarV.Filter = "Documento de texto|*.txt";
+            guardarV.Title = "Guardar RtB";
+            guardarV.FileName = "Vehículo 1";
+            var resultadoV = guardarV.ShowDialog();
+            if (resultadoV == DialogResult.OK)
+            {
+                StreamWriter escribir = new StreamWriter(guardarV.FileName);
+                foreach (object line in rTBguardar2.Lines)
+                {
+                    escribir.WriteLine(line);
+                }
+                escribir.Close();
+            }
         }
+
 
         private void rTBguardar_TextChanged(object sender, EventArgs e)
         {

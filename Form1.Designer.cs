@@ -29,6 +29,7 @@ namespace Original_ParkingLot
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblDriver = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tBNyA = new System.Windows.Forms.TextBox();
@@ -60,9 +61,13 @@ namespace Original_ParkingLot
             this.lblED = new System.Windows.Forms.Label();
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnCerrarPrin = new System.Windows.Forms.Button();
+            this.eNd = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ePNyA = new System.Windows.Forms.ErrorProvider(this.components);
             this.gBAfiliado.SuspendLayout();
             this.gBV.SuspendLayout();
             this.gBGenero.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eNd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ePNyA)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDriver
@@ -91,6 +96,7 @@ namespace Original_ParkingLot
             this.tBNyA.Name = "tBNyA";
             this.tBNyA.Size = new System.Drawing.Size(189, 27);
             this.tBNyA.TabIndex = 2;
+            this.tBNyA.TextChanged += new System.EventHandler(this.tBNyA_TextChanged);
             // 
             // tBD
             // 
@@ -363,6 +369,14 @@ namespace Original_ParkingLot
             this.btnCerrarPrin.UseVisualStyleBackColor = true;
             this.btnCerrarPrin.Click += new System.EventHandler(this.btnCerrarPrin_Click);
             // 
+            // eNd
+            // 
+            this.eNd.ContainerControl = this;
+            // 
+            // ePNyA
+            // 
+            this.ePNyA.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -400,6 +414,8 @@ namespace Original_ParkingLot
             this.gBV.PerformLayout();
             this.gBGenero.ResumeLayout(false);
             this.gBGenero.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eNd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ePNyA)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -438,6 +454,8 @@ namespace Original_ParkingLot
         private System.Windows.Forms.Label lblED;
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button btnCerrarPrin;
+        private System.Windows.Forms.ErrorProvider eNd;
+        private System.Windows.Forms.ErrorProvider ePNyA;
     }
 }
 

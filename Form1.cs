@@ -32,6 +32,21 @@ namespace Original_ParkingLot
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            bool errorC = false;
+            foreach (char caracter in tBD.Text)
+            {
+                if (char.IsLetter(caracter))
+                {
+                    errorC = true;
+                    break;
+                }
+            }
+            if (errorC)
+            {
+                eNd.SetError(tBD, "No se admiten letras");
+            }
+            else
+                eNd.Clear();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -91,6 +106,25 @@ namespace Original_ParkingLot
         private void btnCerrarPrin_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void tBNyA_TextChanged(object sender, EventArgs e)
+        {
+            bool errorN = false;
+            foreach(char digito in tBNyA.Text)
+            {
+                if (char.IsDigit(digito))
+                {
+                    errorN = true;
+                    break;
+                }
+            }
+            if (errorN)
+            {
+                ePNyA.SetError(tBNyA, "No se admiten números");
+            }
+            else
+                ePNyA.Clear();
         }
     }
 }

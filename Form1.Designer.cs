@@ -59,6 +59,7 @@ namespace Original_ParkingLot
             this.rTxBED = new System.Windows.Forms.RichTextBox();
             this.lblED = new System.Windows.Forms.Label();
             this.btnHistorial = new System.Windows.Forms.Button();
+            this.btnCerrarPrin = new System.Windows.Forms.Button();
             this.gBAfiliado.SuspendLayout();
             this.gBV.SuspendLayout();
             this.gBGenero.SuspendLayout();
@@ -345,18 +346,29 @@ namespace Original_ParkingLot
             // 
             // btnHistorial
             // 
-            this.btnHistorial.Location = new System.Drawing.Point(572, 366);
+            this.btnHistorial.Location = new System.Drawing.Point(572, 327);
             this.btnHistorial.Name = "btnHistorial";
             this.btnHistorial.Size = new System.Drawing.Size(117, 38);
             this.btnHistorial.TabIndex = 23;
             this.btnHistorial.Text = "Historial";
             this.btnHistorial.UseVisualStyleBackColor = true;
             // 
+            // btnCerrarPrin
+            // 
+            this.btnCerrarPrin.Location = new System.Drawing.Point(572, 400);
+            this.btnCerrarPrin.Name = "btnCerrarPrin";
+            this.btnCerrarPrin.Size = new System.Drawing.Size(117, 38);
+            this.btnCerrarPrin.TabIndex = 24;
+            this.btnCerrarPrin.Text = "Cerrar";
+            this.btnCerrarPrin.UseVisualStyleBackColor = true;
+            this.btnCerrarPrin.Click += new System.EventHandler(this.btnCerrarPrin_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCerrarPrin);
             this.Controls.Add(this.btnHistorial);
             this.Controls.Add(this.lblED);
             this.Controls.Add(this.rTxBED);
@@ -425,6 +437,7 @@ namespace Original_ParkingLot
         private System.Windows.Forms.RichTextBox rTxBED;
         private System.Windows.Forms.Label lblED;
         private System.Windows.Forms.Button btnHistorial;
+        private System.Windows.Forms.Button btnCerrarPrin;
     }
 }
 

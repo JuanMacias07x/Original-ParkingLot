@@ -40,5 +40,22 @@ namespace Original_ParkingLot
                 escribir.Close();
             }
         }
+
+        private void rTBguardar_TextChanged(object sender, EventArgs e)
+        {
+            rTBguardar.Text = "Datos del conductor: " + "\n" + "Nombre: " + Conductor.Nombre + "\n" + "Documento: " + Conductor.Documento + "\n" + "Sexo: " + Conductor.Sexo + "\n" + "¿Es afiliado?: " + Conductor.Afiliado;
+            rTBguardar2.Text = "Datos del vehículo: " + "\n" + "Placa: " + Vehiculo.Placa + "\n" + "Tipo de vehículo: " + Vehiculo.Tipo + "\n" + "Marca: " + Vehiculo.Marca + "\n" + "Hora de entrada: " + Vehiculo.HoraEn;
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            rTBguardar.Text = "Datos del conductor: " + "\n" + "Nombre: " + Conductor.Nombre + "\n" + "Documento: " + Conductor.Documento + "\n" + "Sexo: " + Conductor.Sexo + "\n" + "¿Es afiliado?: " + Conductor.Afiliado; 
+            rTBguardar2.Text = "Datos del vehículo: " + "\n" + "Placa: " + Vehiculo.Placa + "\n" + "Tipo de vehículo: " + Vehiculo.Tipo + "\n" + "Marca: " + Vehiculo.Marca + "\n" + "Hora de entrada: " + Vehiculo.HoraEn;
+        }
+
+        private void Datos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

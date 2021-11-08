@@ -33,6 +33,7 @@ namespace Original_ParkingLot
             this.rTBguardar2 = new System.Windows.Forms.RichTextBox();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnGuarda = new System.Windows.Forms.Button();
+            this.btnMostrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // rTBguardar
@@ -42,6 +43,7 @@ namespace Original_ParkingLot
             this.rTBguardar.Size = new System.Drawing.Size(380, 383);
             this.rTBguardar.TabIndex = 0;
             this.rTBguardar.Text = "";
+            this.rTBguardar.TextChanged += new System.EventHandler(this.rTBguardar_TextChanged);
             // 
             // rTBguardar2
             // 
@@ -71,17 +73,29 @@ namespace Original_ParkingLot
             this.btnGuarda.UseVisualStyleBackColor = true;
             this.btnGuarda.Click += new System.EventHandler(this.btnGuarda_Click);
             // 
+            // btnMostrar
+            // 
+            this.btnMostrar.Location = new System.Drawing.Point(349, 409);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(94, 29);
+            this.btnMostrar.TabIndex = 4;
+            this.btnMostrar.Text = "Mostrar";
+            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
+            // 
             // Datos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.btnGuarda);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.rTBguardar2);
             this.Controls.Add(this.rTBguardar);
             this.Name = "Datos";
             this.Text = "Datos";
+            this.Load += new System.EventHandler(this.Datos_Load);
             this.ResumeLayout(false);
 
         }
@@ -92,5 +106,6 @@ namespace Original_ParkingLot
         private System.Windows.Forms.RichTextBox rTBguardar2;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnGuarda;
+        private System.Windows.Forms.Button btnMostrar;
     }
 }

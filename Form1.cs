@@ -77,12 +77,20 @@ namespace Original_ParkingLot
 
             Vehiculo.Marca = tbMarca.Text;
             Vehiculo.Placa = tbPM.Text;
-            Vehiculo.HoraEn = (int)Convert.ToDouble(tbHI);
+            Vehiculo.HoraEn = (int)Convert.ToDouble(tbHI.Text);
 
             if (rBPV.Checked == true)
                 Vehiculo.Tipo = "El vehículo es particular";
             if (rBCMV.Checked == true)
                 Vehiculo.Tipo = "El vehículo es Camioneta/MicroBus";
-        } 
+
+            Datos datos = new Datos();
+            datos.Show(); 
+        }
+
+        private void btnCerrarPrin_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

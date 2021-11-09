@@ -62,6 +62,7 @@ namespace Original_ParkingLot
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblMostrarFecha = new System.Windows.Forms.Label();
             this.lblCosto = new System.Windows.Forms.Label();
+            this.btnValor = new System.Windows.Forms.Button();
             this.tbCosto = new System.Windows.Forms.TextBox();
             this.gBAfiliado.SuspendLayout();
             this.gBV.SuspendLayout();
@@ -159,6 +160,7 @@ namespace Original_ParkingLot
             this.gBV.TabIndex = 13;
             this.gBV.TabStop = false;
             this.gBV.Text = "Vehículo";
+            this.gBV.Enter += new System.EventHandler(this.gBV_Enter);
             // 
             // rBCMV
             // 
@@ -181,6 +183,7 @@ namespace Original_ParkingLot
             this.rBPV.TabStop = true;
             this.rBPV.Text = "Particular";
             this.rBPV.UseVisualStyleBackColor = true;
+            this.rBPV.CheckedChanged += new System.EventHandler(this.rBPV_CheckedChanged);
             // 
             // tbMarca
             // 
@@ -363,9 +366,8 @@ namespace Original_ParkingLot
             this.lblMostrarFecha.Font = new System.Drawing.Font("Stencil", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblMostrarFecha.Location = new System.Drawing.Point(530, 197);
             this.lblMostrarFecha.Name = "lblMostrarFecha";
-            this.lblMostrarFecha.Size = new System.Drawing.Size(80, 21);
+            this.lblMostrarFecha.Size = new System.Drawing.Size(0, 21);
             this.lblMostrarFecha.TabIndex = 28;
-            this.lblMostrarFecha.Text = "label5";
             // 
             // lblCosto
             // 
@@ -377,11 +379,21 @@ namespace Original_ParkingLot
             this.lblCosto.Text = "Costo";
             this.lblCosto.Click += new System.EventHandler(this.label5_Click_2);
             // 
+            // btnValor
+            // 
+            this.btnValor.Location = new System.Drawing.Point(371, 266);
+            this.btnValor.Name = "btnValor";
+            this.btnValor.Size = new System.Drawing.Size(73, 29);
+            this.btnValor.TabIndex = 31;
+            this.btnValor.Text = "valor";
+            this.btnValor.UseVisualStyleBackColor = true;
+            this.btnValor.Click += new System.EventHandler(this.btnValor_Click);
+            // 
             // tbCosto
             // 
             this.tbCosto.Location = new System.Drawing.Point(253, 267);
             this.tbCosto.Name = "tbCosto";
-            this.tbCosto.Size = new System.Drawing.Size(189, 27);
+            this.tbCosto.Size = new System.Drawing.Size(111, 27);
             this.tbCosto.TabIndex = 30;
             // 
             // Form1
@@ -389,6 +401,7 @@ namespace Original_ParkingLot
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 391);
+            this.Controls.Add(this.btnValor);
             this.Controls.Add(this.tbCosto);
             this.Controls.Add(this.lblCosto);
             this.Controls.Add(this.lblMostrarFecha);
@@ -463,6 +476,7 @@ namespace Original_ParkingLot
         private System.Windows.Forms.Label lblMostrarFecha;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblCosto;
+        private System.Windows.Forms.Button btnValor;
         private System.Windows.Forms.TextBox tbCosto;
     }
 }

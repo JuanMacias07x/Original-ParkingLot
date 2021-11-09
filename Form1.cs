@@ -131,7 +131,7 @@ namespace Original_ParkingLot
                 ePNyA.Clear();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
             lblMostrarFecha.Text = DateTime.Now.ToShortDateString();
             DateTime fecha = DateTime.Parse(lblMostrarFecha.Text);
@@ -139,15 +139,44 @@ namespace Original_ParkingLot
             double costo = 0;
             switch (afiliado)
             {
-                case "Particular": costo = 1500; break;
-                case "Camioneta/Microbus": costo = 1800; break;
-                case "Particular y afiliado": costo = 1350; break;
-                case "Camioneta/Microbus y afiliado": costo = 1620; break;
+                case "vehículo": costo = 1500; break;
+                case "camioneta/microbus": costo = 1800; break;
             }
             tbCosto.Text = costo.ToString("0.00");
         }
 
         private void label5_Click_2(object sender, EventArgs e)
+        {
+        }
+
+        private void btnValor_Click(object sender, EventArgs e)
+        {
+            string ingreso = tbHI.Text;
+            DateTime HoraIn = DateTime.Parse(ingreso);
+
+            string salida = tbHS.Text;
+            DateTime HoraSd = DateTime.Parse(salida);
+
+            TimeSpan HoraFin = HoraSd - HoraIn;
+            var HoraFinMinutos = HoraFin.TotalMinutes;
+
+            double Particular = 150 * HoraFinMinutos;
+            double CamionetaMicrobus = (150 * (HoraFinMinutos)) * 20 / 100;
+            double PagoTotal = Particular + CamionetaMicrobus;
+
+            if (Vehiculo.Tipo == "Camioneta/Microbus")
+                tbCosto.Text = Convert.ToString(PagoTotal);
+            else
+                tbCosto.Text = Convert.ToString(Particular);
+                    
+        }
+
+        private void rBPV_CheckedChanged(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void gBV_Enter(object sender, EventArgs e)
         {
 
         }

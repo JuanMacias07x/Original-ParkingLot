@@ -99,9 +99,9 @@ namespace Original_ParkingLot
             
 
             if (rBPV.Checked == true)
-                Vehiculo.Tipo = " particular";
+                Vehiculo.Tipo = "particular";
             if (rBCMV.Checked == true)
-                Vehiculo.Tipo = " Camioneta/MicroBus";
+                Vehiculo.Tipo = "CamionetaMicroBus";
 
             Datos datos = new Datos();
             datos.Show(); 
@@ -139,8 +139,6 @@ namespace Original_ParkingLot
             double costo = 0;
             switch (afiliado)
             {
-                case "vehículo": costo = 1500; break;
-                case "camioneta/microbus": costo = 1800; break;
             }
             tbCosto.Text = costo.ToString("0.00");
         }
@@ -160,25 +158,23 @@ namespace Original_ParkingLot
             TimeSpan HoraFin = HoraSd - HoraIn;
             var HoraFinMinutos = HoraFin.TotalMinutes;
 
-            double Particular = 150 * HoraFinMinutos;
-            double CamionetaMicrobus = (150 * (HoraFinMinutos)) * 20 / 100;
-            double PagoTotal = Particular + CamionetaMicrobus;
+            double particular = 150 * HoraFinMinutos;
+            double CamionetaMicroBus = (150 * (HoraFinMinutos)) * 20 / 100;
+            double PagoTotal = particular + CamionetaMicroBus;
 
-            if (Vehiculo.Tipo == "Camioneta/Microbus")
-                tbCosto.Text = Convert.ToString(PagoTotal);
+            if (Vehiculo.Tipo == "CamionetaMicroBus")
+                tbCosto.Text = Convert.ToString(CamionetaMicroBus);
             else
-                tbCosto.Text = Convert.ToString(Particular);
+                tbCosto.Text = Convert.ToString(particular);
                     
         }
 
         private void rBPV_CheckedChanged(object sender, EventArgs e)
         {
-         
         }
 
         private void gBV_Enter(object sender, EventArgs e)
         {
-
         }
     }
 }

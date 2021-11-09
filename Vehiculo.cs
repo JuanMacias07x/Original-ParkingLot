@@ -13,8 +13,8 @@ namespace Original_ParkingLot
         static public string Tipo;
         static public string Placa;
 
-        static public int HoraEn;
-        static public int HoraSa;
+        static public string HoraEn;
+        static public string HoraSa;
 
     }
 }

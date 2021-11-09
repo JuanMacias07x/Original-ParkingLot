@@ -13,6 +13,8 @@ namespace Original_ParkingLot
 {
     public partial class Form1 : Form
     {
+        string dia;
+        string afiliado;
         public Form1()
         {
             InitializeComponent();
@@ -92,12 +94,14 @@ namespace Original_ParkingLot
 
             Vehiculo.Marca = tbMarca.Text;
             Vehiculo.Placa = tbPM.Text;
-            Vehiculo.HoraEn = (int)Convert.ToDouble(tbHI.Text);
+            Vehiculo.HoraEn = tbHI.Text;
+            Vehiculo.HoraSa = tbHS.Text;
+            
 
             if (rBPV.Checked == true)
-                Vehiculo.Tipo = "El vehículo es particular";
+                Vehiculo.Tipo = " particular";
             if (rBCMV.Checked == true)
-                Vehiculo.Tipo = "El vehículo es Camioneta/MicroBus";
+                Vehiculo.Tipo = " Camioneta/MicroBus";
 
             Datos datos = new Datos();
             datos.Show(); 
@@ -125,6 +129,27 @@ namespace Original_ParkingLot
             }
             else
                 ePNyA.Clear();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            lblMostrarFecha.Text = DateTime.Now.ToShortDateString();
+            DateTime fecha = DateTime.Parse(lblMostrarFecha.Text);
+            dia = fecha.ToString("dddd");
+            double costo = 0;
+            switch (afiliado)
+            {
+                case "Particular": costo = 1500; break;
+                case "Camioneta/Microbus": costo = 1800; break;
+                case "Particular y afiliado": costo = 1350; break;
+                case "Camioneta/Microbus y afiliado": costo = 1620; break;
+            }
+            tbCosto.Text = costo.ToString("0.00");
+        }
+
+        private void label5_Click_2(object sender, EventArgs e)
+        {
+
         }
     }
 }

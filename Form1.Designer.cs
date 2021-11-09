@@ -51,18 +51,18 @@ namespace Original_ParkingLot
             this.rBMG = new System.Windows.Forms.RadioButton();
             this.rBHG = new System.Windows.Forms.RadioButton();
             this.lblIyD = new System.Windows.Forms.Label();
-            this.tbHI = new System.Windows.Forms.TextBox();
             this.lblHI = new System.Windows.Forms.Label();
-            this.tbHS = new System.Windows.Forms.TextBox();
             this.lblHS = new System.Windows.Forms.Label();
             this.btnAHI = new System.Windows.Forms.Button();
-            this.btnSA = new System.Windows.Forms.Button();
-            this.rTxBED = new System.Windows.Forms.RichTextBox();
-            this.lblED = new System.Windows.Forms.Label();
-            this.btnHistorial = new System.Windows.Forms.Button();
             this.btnCerrarPrin = new System.Windows.Forms.Button();
             this.eNd = new System.Windows.Forms.ErrorProvider(this.components);
             this.ePNyA = new System.Windows.Forms.ErrorProvider(this.components);
+            this.tbHI = new System.Windows.Forms.MaskedTextBox();
+            this.tbHS = new System.Windows.Forms.MaskedTextBox();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblMostrarFecha = new System.Windows.Forms.Label();
+            this.lblCosto = new System.Windows.Forms.Label();
+            this.tbCosto = new System.Windows.Forms.TextBox();
             this.gBAfiliado.SuspendLayout();
             this.gBV.SuspendLayout();
             this.gBGenero.SuspendLayout();
@@ -73,7 +73,7 @@ namespace Original_ParkingLot
             // lblDriver
             // 
             this.lblDriver.AutoSize = true;
-            this.lblDriver.Location = new System.Drawing.Point(136, 9);
+            this.lblDriver.Location = new System.Drawing.Point(51, 9);
             this.lblDriver.Name = "lblDriver";
             this.lblDriver.Size = new System.Drawing.Size(78, 20);
             this.lblDriver.TabIndex = 0;
@@ -83,7 +83,7 @@ namespace Original_ParkingLot
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(89, 38);
+            this.label1.Location = new System.Drawing.Point(4, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 20);
             this.label1.TabIndex = 1;
@@ -92,7 +92,7 @@ namespace Original_ParkingLot
             // 
             // tBNyA
             // 
-            this.tBNyA.Location = new System.Drawing.Point(89, 61);
+            this.tBNyA.Location = new System.Drawing.Point(4, 61);
             this.tBNyA.Name = "tBNyA";
             this.tBNyA.Size = new System.Drawing.Size(189, 27);
             this.tBNyA.TabIndex = 2;
@@ -100,7 +100,7 @@ namespace Original_ParkingLot
             // 
             // tBD
             // 
-            this.tBD.Location = new System.Drawing.Point(89, 114);
+            this.tBD.Location = new System.Drawing.Point(4, 124);
             this.tBD.Name = "tBD";
             this.tBD.Size = new System.Drawing.Size(189, 27);
             this.tBD.TabIndex = 4;
@@ -109,7 +109,7 @@ namespace Original_ParkingLot
             // lblD
             // 
             this.lblD.AutoSize = true;
-            this.lblD.Location = new System.Drawing.Point(89, 91);
+            this.lblD.Location = new System.Drawing.Point(4, 101);
             this.lblD.Name = "lblD";
             this.lblD.Size = new System.Drawing.Size(111, 20);
             this.lblD.TabIndex = 3;
@@ -142,9 +142,9 @@ namespace Original_ParkingLot
             // 
             this.gBAfiliado.Controls.Add(this.rBNoA);
             this.gBAfiliado.Controls.Add(this.rBSiA);
-            this.gBAfiliado.Location = new System.Drawing.Point(39, 147);
+            this.gBAfiliado.Location = new System.Drawing.Point(4, 287);
             this.gBAfiliado.Name = "gBAfiliado";
-            this.gBAfiliado.Size = new System.Drawing.Size(128, 110);
+            this.gBAfiliado.Size = new System.Drawing.Size(189, 93);
             this.gBAfiliado.TabIndex = 7;
             this.gBAfiliado.TabStop = false;
             this.gBAfiliado.Text = "Afiliado";
@@ -153,7 +153,7 @@ namespace Original_ParkingLot
             // 
             this.gBV.Controls.Add(this.rBCMV);
             this.gBV.Controls.Add(this.rBPV);
-            this.gBV.Location = new System.Drawing.Point(340, 157);
+            this.gBV.Location = new System.Drawing.Point(255, 157);
             this.gBV.Name = "gBV";
             this.gBV.Size = new System.Drawing.Size(189, 84);
             this.gBV.TabIndex = 13;
@@ -184,7 +184,7 @@ namespace Original_ParkingLot
             // 
             // tbMarca
             // 
-            this.tbMarca.Location = new System.Drawing.Point(340, 114);
+            this.tbMarca.Location = new System.Drawing.Point(255, 124);
             this.tbMarca.Name = "tbMarca";
             this.tbMarca.Size = new System.Drawing.Size(189, 27);
             this.tbMarca.TabIndex = 12;
@@ -192,7 +192,7 @@ namespace Original_ParkingLot
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(340, 91);
+            this.label2.Location = new System.Drawing.Point(255, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 20);
             this.label2.TabIndex = 11;
@@ -200,7 +200,7 @@ namespace Original_ParkingLot
             // 
             // tbPM
             // 
-            this.tbPM.Location = new System.Drawing.Point(340, 61);
+            this.tbPM.Location = new System.Drawing.Point(255, 61);
             this.tbPM.Name = "tbPM";
             this.tbPM.Size = new System.Drawing.Size(189, 27);
             this.tbPM.TabIndex = 10;
@@ -208,7 +208,7 @@ namespace Original_ParkingLot
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(340, 38);
+            this.label3.Location = new System.Drawing.Point(255, 38);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 20);
             this.label3.TabIndex = 9;
@@ -218,7 +218,7 @@ namespace Original_ParkingLot
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(387, 9);
+            this.label4.Location = new System.Drawing.Point(302, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 20);
             this.label4.TabIndex = 8;
@@ -230,9 +230,9 @@ namespace Original_ParkingLot
             this.gBGenero.Controls.Add(this.rBOG);
             this.gBGenero.Controls.Add(this.rBMG);
             this.gBGenero.Controls.Add(this.rBHG);
-            this.gBGenero.Location = new System.Drawing.Point(188, 147);
+            this.gBGenero.Location = new System.Drawing.Point(4, 157);
             this.gBGenero.Name = "gBGenero";
-            this.gBGenero.Size = new System.Drawing.Size(132, 110);
+            this.gBGenero.Size = new System.Drawing.Size(189, 124);
             this.gBGenero.TabIndex = 8;
             this.gBGenero.TabStop = false;
             this.gBGenero.Text = "Género";
@@ -274,41 +274,27 @@ namespace Original_ParkingLot
             // lblIyD
             // 
             this.lblIyD.AutoSize = true;
-            this.lblIyD.Location = new System.Drawing.Point(572, 9);
+            this.lblIyD.Location = new System.Drawing.Point(487, 9);
             this.lblIyD.Name = "lblIyD";
             this.lblIyD.Size = new System.Drawing.Size(169, 20);
             this.lblIyD.TabIndex = 14;
             this.lblIyD.Text = "Ingreso y disponibilidad";
             this.lblIyD.Click += new System.EventHandler(this.label5_Click);
             // 
-            // tbHI
-            // 
-            this.tbHI.Location = new System.Drawing.Point(572, 52);
-            this.tbHI.Name = "tbHI";
-            this.tbHI.Size = new System.Drawing.Size(189, 27);
-            this.tbHI.TabIndex = 16;
-            // 
             // lblHI
             // 
             this.lblHI.AutoSize = true;
-            this.lblHI.Location = new System.Drawing.Point(572, 29);
+            this.lblHI.Location = new System.Drawing.Point(485, 31);
             this.lblHI.Name = "lblHI";
             this.lblHI.Size = new System.Drawing.Size(98, 20);
             this.lblHI.TabIndex = 15;
             this.lblHI.Text = "Hora ingreso:";
             this.lblHI.Click += new System.EventHandler(this.label5_Click_1);
             // 
-            // tbHS
-            // 
-            this.tbHS.Location = new System.Drawing.Point(572, 112);
-            this.tbHS.Name = "tbHS";
-            this.tbHS.Size = new System.Drawing.Size(189, 27);
-            this.tbHS.TabIndex = 18;
-            // 
             // lblHS
             // 
             this.lblHS.AutoSize = true;
-            this.lblHS.Location = new System.Drawing.Point(572, 89);
+            this.lblHS.Location = new System.Drawing.Point(485, 101);
             this.lblHS.Name = "lblHS";
             this.lblHS.Size = new System.Drawing.Size(88, 20);
             this.lblHS.TabIndex = 17;
@@ -316,54 +302,19 @@ namespace Original_ParkingLot
             // 
             // btnAHI
             // 
-            this.btnAHI.Location = new System.Drawing.Point(572, 157);
+            this.btnAHI.Location = new System.Drawing.Point(258, 341);
             this.btnAHI.Name = "btnAHI";
-            this.btnAHI.Size = new System.Drawing.Size(184, 29);
+            this.btnAHI.Size = new System.Drawing.Size(184, 38);
             this.btnAHI.TabIndex = 19;
             this.btnAHI.Text = "Aceptar ";
             this.btnAHI.UseVisualStyleBackColor = true;
             this.btnAHI.Click += new System.EventHandler(this.btnAHI_Click);
             // 
-            // btnSA
-            // 
-            this.btnSA.Location = new System.Drawing.Point(572, 222);
-            this.btnSA.Name = "btnSA";
-            this.btnSA.Size = new System.Drawing.Size(184, 29);
-            this.btnSA.TabIndex = 20;
-            this.btnSA.Text = "Salida/saldo";
-            this.btnSA.UseVisualStyleBackColor = true;
-            // 
-            // rTxBED
-            // 
-            this.rTxBED.Location = new System.Drawing.Point(99, 327);
-            this.rTxBED.Name = "rTxBED";
-            this.rTxBED.Size = new System.Drawing.Size(428, 111);
-            this.rTxBED.TabIndex = 21;
-            this.rTxBED.Text = "";
-            // 
-            // lblED
-            // 
-            this.lblED.AutoSize = true;
-            this.lblED.Location = new System.Drawing.Point(245, 294);
-            this.lblED.Name = "lblED";
-            this.lblED.Size = new System.Drawing.Size(134, 20);
-            this.lblED.TabIndex = 22;
-            this.lblED.Text = "Espacio disponible";
-            // 
-            // btnHistorial
-            // 
-            this.btnHistorial.Location = new System.Drawing.Point(572, 327);
-            this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(117, 38);
-            this.btnHistorial.TabIndex = 23;
-            this.btnHistorial.Text = "Historial";
-            this.btnHistorial.UseVisualStyleBackColor = true;
-            // 
             // btnCerrarPrin
             // 
-            this.btnCerrarPrin.Location = new System.Drawing.Point(572, 400);
+            this.btnCerrarPrin.Location = new System.Drawing.Point(530, 341);
             this.btnCerrarPrin.Name = "btnCerrarPrin";
-            this.btnCerrarPrin.Size = new System.Drawing.Size(117, 38);
+            this.btnCerrarPrin.Size = new System.Drawing.Size(146, 39);
             this.btnCerrarPrin.TabIndex = 24;
             this.btnCerrarPrin.Text = "Cerrar";
             this.btnCerrarPrin.UseVisualStyleBackColor = true;
@@ -377,20 +328,76 @@ namespace Original_ParkingLot
             // 
             this.ePNyA.ContainerControl = this;
             // 
+            // tbHI
+            // 
+            this.tbHI.Location = new System.Drawing.Point(485, 63);
+            this.tbHI.Mask = "00:00";
+            this.tbHI.Name = "tbHI";
+            this.tbHI.Size = new System.Drawing.Size(189, 27);
+            this.tbHI.TabIndex = 25;
+            this.tbHI.ValidatingType = typeof(System.DateTime);
+            // 
+            // tbHS
+            // 
+            this.tbHS.Location = new System.Drawing.Point(485, 124);
+            this.tbHS.Mask = "00:00";
+            this.tbHS.Name = "tbHS";
+            this.tbHS.Size = new System.Drawing.Size(189, 27);
+            this.tbHS.TabIndex = 26;
+            this.tbHS.ValidatingType = typeof(System.DateTime);
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(485, 157);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(50, 20);
+            this.lblFecha.TabIndex = 27;
+            this.lblFecha.Text = "Fecha:";
+            // 
+            // lblMostrarFecha
+            // 
+            this.lblMostrarFecha.AutoSize = true;
+            this.lblMostrarFecha.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblMostrarFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMostrarFecha.Font = new System.Drawing.Font("Stencil", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMostrarFecha.Location = new System.Drawing.Point(530, 197);
+            this.lblMostrarFecha.Name = "lblMostrarFecha";
+            this.lblMostrarFecha.Size = new System.Drawing.Size(80, 21);
+            this.lblMostrarFecha.TabIndex = 28;
+            this.lblMostrarFecha.Text = "label5";
+            // 
+            // lblCosto
+            // 
+            this.lblCosto.AutoSize = true;
+            this.lblCosto.Location = new System.Drawing.Point(258, 244);
+            this.lblCosto.Name = "lblCosto";
+            this.lblCosto.Size = new System.Drawing.Size(47, 20);
+            this.lblCosto.TabIndex = 29;
+            this.lblCosto.Text = "Costo";
+            this.lblCosto.Click += new System.EventHandler(this.label5_Click_2);
+            // 
+            // tbCosto
+            // 
+            this.tbCosto.Location = new System.Drawing.Point(253, 267);
+            this.tbCosto.Name = "tbCosto";
+            this.tbCosto.Size = new System.Drawing.Size(189, 27);
+            this.tbCosto.TabIndex = 30;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnCerrarPrin);
-            this.Controls.Add(this.btnHistorial);
-            this.Controls.Add(this.lblED);
-            this.Controls.Add(this.rTxBED);
-            this.Controls.Add(this.btnSA);
-            this.Controls.Add(this.btnAHI);
+            this.ClientSize = new System.Drawing.Size(686, 391);
+            this.Controls.Add(this.tbCosto);
+            this.Controls.Add(this.lblCosto);
+            this.Controls.Add(this.lblMostrarFecha);
+            this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.tbHS);
-            this.Controls.Add(this.lblHS);
             this.Controls.Add(this.tbHI);
+            this.Controls.Add(this.btnCerrarPrin);
+            this.Controls.Add(this.btnAHI);
+            this.Controls.Add(this.lblHS);
             this.Controls.Add(this.lblHI);
             this.Controls.Add(this.lblIyD);
             this.Controls.Add(this.gBGenero);
@@ -408,6 +415,7 @@ namespace Original_ParkingLot
             this.Controls.Add(this.lblDriver);
             this.Name = "Form1";
             this.Text = "ParkingLot";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.gBAfiliado.ResumeLayout(false);
             this.gBAfiliado.PerformLayout();
             this.gBV.ResumeLayout(false);
@@ -444,18 +452,18 @@ namespace Original_ParkingLot
         private System.Windows.Forms.RadioButton rBHG;
         private System.Windows.Forms.RadioButton rBOG;
         private System.Windows.Forms.Label lblIyD;
-        private System.Windows.Forms.TextBox tbHI;
         private System.Windows.Forms.Label lblHI;
-        private System.Windows.Forms.TextBox tbHS;
         private System.Windows.Forms.Label lblHS;
         private System.Windows.Forms.Button btnAHI;
-        private System.Windows.Forms.Button btnSA;
-        private System.Windows.Forms.RichTextBox rTxBED;
-        private System.Windows.Forms.Label lblED;
-        private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button btnCerrarPrin;
         private System.Windows.Forms.ErrorProvider eNd;
         private System.Windows.Forms.ErrorProvider ePNyA;
+        private System.Windows.Forms.MaskedTextBox tbHS;
+        private System.Windows.Forms.MaskedTextBox tbHI;
+        private System.Windows.Forms.Label lblMostrarFecha;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblCosto;
+        private System.Windows.Forms.TextBox tbCosto;
     }
 }
 
